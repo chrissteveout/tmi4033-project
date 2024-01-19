@@ -33,6 +33,7 @@ if seed_track:
         st.subheader("Recommended Tracks:")
         
         for idx, track in enumerate(recommendations['tracks']):
+            st.image(track['album']['images'][0]['url'], caption=f"{idx + 1}. {track['name']} by {track['artists'][0]['name']}")
             st.write(f"{idx + 1}. {track['name']} by {track['artists'][0]['name']}")
     
     else:
